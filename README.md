@@ -1,6 +1,6 @@
 Referências
 
-- https://www.eduardopires.net.br/2014/10/tutorial-asp-net-mvc-5-ddd-ef-automapper-ioc-dicas-e-truques/ * 46 minutos
+- https://www.eduardopires.net.br/2014/10/tutorial-asp-net-mvc-5-ddd-ef-automapper-ioc-dicas-e-truques/ * 1h55m
 - http://www.macoratti.net/17/05/aspcore_nvdb1.htm
 - https://www.devmedia.com.br/entity-framework-core-criando-bases-de-dados-com-migrations/36776
 - https://medium.com/jundevelopers/estruturando-arquitetura-api-net-core-2-2-32d99145a19d

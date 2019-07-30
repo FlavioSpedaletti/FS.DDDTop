@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FS.DDDTop.Infra.Data.Migrations
 {
-    public partial class inicial : Migration
+    public partial class inicialComTiposCampos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,9 +14,9 @@ namespace FS.DDDTop.Infra.Data.Migrations
                 {
                     ClienteId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(type: "varchar(100)", nullable: true),
-                    Sobrenome = table.Column<string>(type: "varchar(100)", nullable: true),
-                    Email = table.Column<string>(type: "varchar(150)", nullable: true),
+                    Nome = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
+                    Sobrenome = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
+                    Email = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false),
                     DataCadastro = table.Column<DateTime>(nullable: false),
                     Ativo = table.Column<bool>(nullable: false)
                 },

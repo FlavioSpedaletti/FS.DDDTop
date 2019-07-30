@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EntityConfigs\" />
+    <Compile Remove="Migrations\20190730013504_chavesComFluentApi.cs" />
+    <Compile Remove="Migrations\20190730013504_chavesComFluentApi.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Repositories\" />
   </ItemGroup>
 
@@ -18,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DDDTop.Domain\FS.DDDTop.Domain.csproj" />
+    <ProjectReference Include="..\FS.DDDTop.Domain\FS.DDDTop.Domain.csproj" />
   </ItemGroup>
 
 </Project>

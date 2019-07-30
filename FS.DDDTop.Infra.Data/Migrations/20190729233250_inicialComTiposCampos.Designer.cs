@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FS.DDDTop.Infra.Data.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20190729005910_inicial")]
-    partial class inicial
+    [Migration("20190729233250_inicialComTiposCampos")]
+    partial class inicialComTiposCampos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace FS.DDDTop.Infra.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DDDTop.Domain.Entities.Cliente", b =>
+            modelBuilder.Entity("FS.DDDTop.Domain.Entities.Cliente", b =>
                 {
                     b.Property<int>("ClienteId")
                         .ValueGeneratedOnAdd()
@@ -32,13 +32,19 @@ namespace FS.DDDTop.Infra.Data.Migrations
                     b.Property<DateTime>("DataCadastro");
 
                     b.Property<string>("Email")
-                        .HasColumnType("varchar(150)");
+                        .IsRequired()
+                        .HasColumnType("varchar(150)")
+                        .HasMaxLength(150);
 
                     b.Property<string>("Nome")
-                        .HasColumnType("varchar(100)");
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<string>("Sobrenome")
-                        .HasColumnType("varchar(100)");
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100);
 
                     b.HasKey("ClienteId");
 
