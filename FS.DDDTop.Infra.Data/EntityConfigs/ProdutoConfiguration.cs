@@ -15,6 +15,7 @@ namespace FS.DDDTop.Infra.Data.EntityConfigs
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(250);
             builder.Property(x => x.Valor).IsRequired();
 
+            //não precisa configurar os relacionamentos por aqui (FluentAPI) porque já foram definidos nas entidades
             //builder.HasOne<Cliente>().WithMany(c => c.Produtos);
 
             //a convenção do efcore não tem pluralize

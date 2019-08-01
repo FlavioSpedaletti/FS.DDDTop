@@ -6,11 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FS.DDDTop.Domain\FS.DDDTop.Domain.csproj" />
     <ProjectReference Include="..\FS.DDDTop.Infra.Data\FS.DDDTop.Infra.Data.csproj" />
   </ItemGroup>
 

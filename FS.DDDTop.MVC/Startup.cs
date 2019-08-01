@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using FS.DDDTop.Domain.Interfaces;
 using FS.DDDTop.Infra.Data.Contexts;
+using FS.DDDTop.Infra.Data.Repositories;
+using FS.DDDTop.MVC.AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,10 +37,12 @@ namespace FS.DDDTop.MVC
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
             var connection = @"Server=(localdb)\mssqllocaldb;Database=DDDTop;Trusted_Connection=True;";
             services.AddDbContext<EFContext>(options => options.UseSqlServer(connection));
+            services.AddAutoMapper(new Type[] { typeof(ViewModelToDomainMappingProfile), typeof(DomainToViewModelMappingProfile) });
+            services.AddScoped(typeof(IClienteRepository), typeof(ClienteRepository));
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
