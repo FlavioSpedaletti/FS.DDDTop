@@ -1,6 +1,6 @@
 # Exemplo de arquitetura DDD (site + webapi)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ft3vq72ldtkhtlwl?svg=true)](https://ci.appveyor.com/project/FlavioSpedaletti/fs-dddtop)
+[![Build status](https://ci.appveyor.com/api/projects/status/ft3vq72ldtkhtlwl?svg=true)](https://ci.appveyor.com/project/FlavioSpedaletti/fs-dddtop) [![Issues](https://img.shields.io/github/issues/FlavioSpedaletti/FS.DDDTop.svg)](https://huboard.com/FlavioSpedaletti/FS.DDDTop)
 
 Referências
 
