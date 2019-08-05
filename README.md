@@ -1,3 +1,7 @@
+# Exemplo de arquitetura DDD (site + webapi)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/ft3vq72ldtkhtlwl?svg=true)](https://ci.appveyor.com/project/FlavioSpedaletti/fs-dddtop)
+
 Referências
 
 - https://www.eduardopires.net.br/2014/10/tutorial-asp-net-mvc-5-ddd-ef-automapper-ioc-dicas-e-truques/ * 1h55m
