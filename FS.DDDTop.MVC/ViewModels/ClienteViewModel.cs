@@ -25,6 +25,6 @@ namespace FS.DDDTop.MVC.ViewModels
         [ScaffoldColumn(false)]
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
-        public virtual ICollection<ProdutoViewModel> Produtos { get; set; }
+        public virtual ICollection<ReclamacaoViewModel> Reclamacoes { get; set; }
     }
 }

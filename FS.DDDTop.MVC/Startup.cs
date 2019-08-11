@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Profiling;
 
 namespace FS.DDDTop.MVC
 {
@@ -38,11 +39,20 @@ namespace FS.DDDTop.MVC
             });
 
             var connection = @"Server=(localdb)\mssqllocaldb;Database=DDDTop;Trusted_Connection=True;";
-            services.AddDbContext<EFContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<EFContext>(options => options.UseLazyLoadingProxies().UseSqlServer(connection));
             services.AddAutoMapper(new Type[] { typeof(ViewModelToDomainMappingProfile), typeof(DomainToViewModelMappingProfile) });
             services.AddScoped(typeof(IClienteRepository), typeof(ClienteRepository));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddMiniProfiler(options =>
+            {
+                options.PopupRenderPosition = RenderPosition.BottomLeft;
+                options.PopupShowTimeWithChildren = true;
+                options.TrackConnectionOpenClose = true;
+                options.SqlFormatter = new StackExchange.Profiling.SqlFormatters.InlineFormatter();
+            })
+            .AddEntityFramework();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +72,7 @@ namespace FS.DDDTop.MVC
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseMiniProfiler();
 
             app.UseMvc(routes =>
             {

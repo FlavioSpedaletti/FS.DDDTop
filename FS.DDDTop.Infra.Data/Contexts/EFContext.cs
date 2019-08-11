@@ -17,7 +17,7 @@ namespace FS.DDDTop.Infra.Data.Contexts
         }
 
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Reclamacao> Reclamacoes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace FS.DDDTop.Infra.Data.Contexts
             }
 
             modelBuilder.ApplyConfiguration(new ClienteConfiguration());
-            modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
+            modelBuilder.ApplyConfiguration(new ReclamacaoConfiguration());
 
             //configura os campos string para varchar(100), mas o problema é que sobrescreve as data annotations da entidade
             //foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(t => t.GetProperties()).Where(p => p.ClrType == typeof(string)))

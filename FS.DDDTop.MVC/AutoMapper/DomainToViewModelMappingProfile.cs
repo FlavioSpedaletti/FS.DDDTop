@@ -13,7 +13,7 @@ namespace FS.DDDTop.MVC.AutoMapper
         public DomainToViewModelMappingProfile()
         {
             CreateMap<Cliente, ClienteViewModel>();
-            CreateMap<Produto, ProdutoViewModel>();
+            CreateMap<Reclamacao, ReclamacaoViewModel>();
         }
     }
 }

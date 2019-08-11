@@ -21,7 +21,7 @@ namespace FS.DDDTop.Domain.Entities
         public string Email { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
-        public virtual ICollection<Produto> Produtos { get; set; }
+        public virtual ICollection<Reclamacao> Reclamacoes { get; set; }
 
         //regra de negócio qualquer
         //as entidades possuem propriedades e métodos (estados e comportamentos)

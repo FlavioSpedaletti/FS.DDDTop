@@ -6,16 +6,14 @@ using System.Text;
 
 namespace FS.DDDTop.Domain.Entities
 {
-    public class Produto
+    public class Reclamacao
     {
-        public int ProdutoId { get; set; }
+        public int ReclamacaoId { get; set; }
         [Required]
         [Column(TypeName = "varchar(250)")]
-        public string Nome { get; set; }
+        public string Descricao { get; set; }
         [Required]
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal Valor { get; set; }
-        public bool Disponivel { get; set; }
+        public bool Resolvida { get; set; }
         public int ClienteId { get; set; }
         public virtual Cliente Cliente { get; set; }
     }

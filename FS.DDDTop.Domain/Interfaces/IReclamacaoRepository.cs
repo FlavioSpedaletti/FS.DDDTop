@@ -5,8 +5,8 @@ using System.Text;
 
 namespace FS.DDDTop.Domain.Interfaces
 {
-    public interface IProdutoRepository : IRepositoryBase<Produto>
+    public interface IReclamacaoRepository : IRepositoryBase<Reclamacao>
     {
-        IEnumerable<Produto> BuscarPorNome(string nome);
+        IEnumerable<Reclamacao> BuscarPorDescricao(string descricao);
     }
 }

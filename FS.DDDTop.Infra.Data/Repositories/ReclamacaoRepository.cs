@@ -8,17 +8,17 @@ using System.Text;
 
 namespace FS.DDDTop.Infra.Data.Repositories
 {
-    public class ProdutoRepository : RepositoryBase<Produto>, IProdutoRepository
+    public class ReclamacaoRepository : RepositoryBase<Reclamacao>, IReclamacaoRepository
     {
         protected EFContext _db;
-        public ProdutoRepository(EFContext db) : base(db)
+        public ReclamacaoRepository(EFContext db) : base(db)
         {
             _db = db;
         }
 
-        public IEnumerable<Produto> BuscarPorNome(string nome)
+        public IEnumerable<Reclamacao> BuscarPorDescricao(string descricao)
         {
-            return _db.Produtos.Where(p => p.Nome == nome);
+            return _db.Reclamacoes.Where(p => p.Descricao.Contains(descricao));
         }
     }
 }

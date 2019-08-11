@@ -7,5 +7,6 @@ namespace FS.DDDTop.Domain.Interfaces
 {
     public interface IClienteRepository : IRepositoryBase<Cliente>
     {
+        Cliente GetByIdComEagerLoading(int id);
     }
 }
