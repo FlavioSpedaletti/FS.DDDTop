@@ -1,6 +1,6 @@
 # Exemplo de arquitetura DDD (site + webapi)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ft3vq72ldtkhtlwl?svg=true)](https://ci.appveyor.com/project/FlavioSpedaletti/fs-dddtop) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9bf3916ab61a4ce8bdd93d4e1c1572d1)](https://www.codacy.com/manual/FlavioSpedaletti/FS.DDDTop?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FlavioSpedaletti/FS.DDDTop&amp;utm_campaign=Badge_Grade) [![Issues](https://img.shields.io/github/issues/FlavioSpedaletti/FS.DDDTop.svg)](https://huboard.com/FlavioSpedaletti/FS.DDDTop)
+[![Build status](https://ci.appveyor.com/api/projects/status/ft3vq72ldtkhtlwl?svg=true)](https://ci.appveyor.com/project/FlavioSpedaletti/fs-dddtop) [![Issues](https://img.shields.io/github/issues/FlavioSpedaletti/FS.DDDTop.svg)](https://huboard.com/FlavioSpedaletti/FS.DDDTop) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9bf3916ab61a4ce8bdd93d4e1c1572d1)](https://www.codacy.com/manual/FlavioSpedaletti/FS.DDDTop?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FlavioSpedaletti/FS.DDDTop&amp;utm_campaign=Badge_Grade) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=FlavioSpedaletti_FS.DDDTop&metric=alert_status)](https://sonarcloud.io/dashboard?id=FlavioSpedaletti_FS.DDDTop)
 
 Referências
 
