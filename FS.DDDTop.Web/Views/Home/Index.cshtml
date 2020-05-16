@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model ClienteViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @Model.Nome</h1>
+    <p>Reclamações:</p>
+
+    <ul>
+        @foreach(var r in Model.Reclamacoes)
+        {
+            <li>@r.Descricao (@(r.Resolvida ? "Resolvida" : "Não resolvida"))</li>
+        }
+    </ul>
+    
+</div>

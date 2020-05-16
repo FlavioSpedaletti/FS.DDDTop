@@ -2,9 +2,7 @@
 using FS.DDDTop.Infra.Data.EntityConfigs;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace FS.DDDTop.Infra.Data.Contexts
 {
@@ -37,6 +35,27 @@ namespace FS.DDDTop.Infra.Data.Contexts
             //{
             //    property.Relational().ColumnType = "varchar(100)";
             //}
+
+            Seed(modelBuilder);
+        }
+
+        private void Seed(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Cliente>().HasData(
+                new Cliente
+                {
+                    ClienteId = 1,
+                    Nome = "Flavio",
+                    Sobrenome = "Spedaletti",
+                    Email = "flavio@email.com",
+                    DataCadastro = DateTime.Now,
+                    Ativo = true
+                });
+
+            modelBuilder.Entity<Reclamacao>().HasData(
+                new Reclamacao { ClienteId = 1, ReclamacaoId = 1, Descricao = "Internet lenta", Resolvida = false },
+                new Reclamacao { ClienteId = 1, ReclamacaoId = 2, Descricao = "Sinal da TV caiu", Resolvida = true }
+            );
         }
 
         public override int SaveChanges()
@@ -52,5 +71,6 @@ namespace FS.DDDTop.Infra.Data.Contexts
 
             return base.SaveChanges();
         }
+
     }
 }
