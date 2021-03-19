@@ -30,3 +30,4 @@
 - https://medium.com/jundevelopers/estruturando-arquitetura-api-net-core-2-2-32d99145a19d
 - https://medium.com/@ericandrade_24404/parte-02-criando-arquitetura-em-camadas-com-ddd-inje%C3%A7%C3%A3o-de-dep-ef-defac0005667
 - https://docs.microsoft.com/pt-br/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
+- https://www.luisdev.com.br/2020/09/29/clean-architecture-com-asp-net-core-parte-1/
